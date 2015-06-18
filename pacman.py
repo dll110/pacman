@@ -70,7 +70,7 @@ def pacman():
     }
     for e in pygame.event.get():
         if e.type == pygame.QUIT:
-            return
+            exit(0)
         elif e.type == pygame.KEYDOWN and e.key in move_pacman:
             if pos_pacman[0] > 50 or pos_pacman[0] < 750 or pos_pacman[1] > 50 or pos_pacman[1] < 550:
                 pos_pacman = (pos_pacman [0]+move_pacman[e.key][0], pos_pacman[1]+move_pacman[e.key][1])
